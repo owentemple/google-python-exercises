@@ -62,10 +62,10 @@ def print_top(filename):
   s = f.read()
   words = s.split()
   for word in words:
-    if word in d:
-      d[word] += 1
+    if word.lower() in d:
+      d[word.lower()] += 1
     else :
-      d[word] = 1
+      d[word.lower()] = 1
   for k in sorted(d,key=d.get,reverse=True)[:20]:
     print k,d[k]
 
